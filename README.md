@@ -26,3 +26,9 @@ In order to get the REST API up and running, follow the following steps:
   If you want to find certain images by name,
   add the header "name": name of the image you want to find (String).
   This will return all the images having the name specified by you.
+  
+  The response of this API would be paginated and you will get a "currentPage" and a "totalPages" field in the response.
+  If you want to view a particular page, add   "?page=x" (where x is the pagenumber you wish to see) to the url and you will be taken to the page. 
+  The default limit of the pagination is 2. If you wish to change the limit, you can add "?limit=y" (y being the new limit), 
+  then you'll see y objects per page.
+  If you wish to change the limit to y and then view page x, use "?limit=y&page=x" at the end of your URL and the changes will be made
